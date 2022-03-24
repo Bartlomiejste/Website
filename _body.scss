@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  background-image: url("/image/bg.jpg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.welcome_txt {
+  max-width: 50%;
+  margin: 400px auto;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 5px;
+  color: blanchedalmond;
+}
+.floor {
+  font-size: 80px;
+  opacity: 0;
+  color: blanchedalmond;
+  transition: 0.2s;
+}
+.floor.active {
+  opacity: 1;
+  color: blanchedalmond;
+}
+
+.stars {
+  position: absolute;
+  display: block;
+  top: -50px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #00fff9;
+  box-shadow: 0 0 10px #00fff9, 0 0 20px #00fff9, 0 0 30px #00fff9,
+    0 0 40px #00fff9, 0 0 50px #00fff9, 0 0 60px #00fff9, 0 0 70px #00fff9,
+    0 0 80px #00fff9, 0 0 90px #00fff9, 0 0 100px #00fff9;
+  animation: movestars 20s linear infinite both;
+}
+
+@keyframes movestars {
+  100% {
+    top: 1000px;
+    left: 1000px;
+  }
+}
+
+.movestar:after {
+  content: &2606;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+}
